@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../tpticmas"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dieguito"
+	}
+}

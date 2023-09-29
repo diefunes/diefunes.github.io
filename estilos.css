@@ -1,0 +1,88 @@
+body{ 
+    font-family:'Sofia Sans', sans-serif;
+    background-color: rgb(209, 173, 201);
+}
+
+#header{
+    color: rgb(255, 255, 255);
+    height: 15rem;
+    background-image: url('fondoheader.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x:center;
+    
+    
+}
+#draw{
+    margin-right: 5rem;
+    width: 6rem;
+    height: 6rem;
+    fill-opacity: 80%;
+    position: end;
+}
+.nombre{
+    padding-left: 0rem;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+#foto{
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 30px;
+    
+}
+
+button{
+    background-color: rgb(240, 243, 247);
+    border-radius: 15px;
+    border: none;
+    height: fit-content;
+    width: 12rem;
+    color: rgb(35, 36, 34);
+    padding: 0.8rem;
+    font-size: larger;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.hover-collapse:hover {
+    cursor: pointer;
+}
+
+h4{
+    margin-top: 1rem;
+}
+
+#head{
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255)
+}
+
+#place{
+    font-size: 1.2rem;
+    color: rgb(219, 255, 253)
+}
+
+.progress{
+    background-color:rgb(216, 171, 171);
+    border: 1px solid white;
+    border-radius: 2px;
+    height: 0.8rem;
+}
+.progress-bar{
+    background-color: rgb(158, 233, 158);
+}
+footer{
+    margin-top: 4rem;
+    padding-left: 1rem;
+}
+ul{
+    list-style: none;
+}
+#contacto{
+    color: rgb(255, 255, 255);
+}

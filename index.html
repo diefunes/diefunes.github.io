@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <title>CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@100;300;400&family=Sofia+Sans:wght@100;200;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./estilos.css">
+    <style>
+        #miParrafo,
+        #miParrafo2 {
+            font-size: 24px;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container-fluid mt-3">
+            <img src="./diego.jpg" class="float-start" alt="fotocv" width="200" height="200" id="foto">
+            <h2 class="nombre">Lorem Ipsum</h2>
+            <h3>Corrector Literario</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <button type="button" class="hover-collapse" data-bs-toggle="collapse" data-bs-target="#demo1"
+                    aria-expanded="false" aria-controls="demo1">Experiencia laboral</button>
+                <div id="demo1" class="collapse">
+                    <p></p>
+                    <span id="head">Lectura de originales</span>
+                    <p>2002-2005</p>
+                    <h4 id="place">Grupo Editorial Planeta</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <span id="head">Corrección de estilo</span>
+                    <p>2006-presente</p>
+                    <h4 id="place">Editorial Andrómeda</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <button type="button" class="hover-collapse" data-bs-toggle="collapse" data-bs-target="#demo2"
+                    aria-expanded="false" aria-controls="demo2">Historia académica</button>
+                <div id="demo2" class="collapse">
+                    <p></p>
+                    <span id="head">Corrector literario</span>
+                    <p>2002-2004</p>
+                    <h4 id="place">Instituto Eduardo Mallea</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <button type="button" class="hover-collapse" data-bs-toggle="collapse" data-bs-target="#demo3"
+                    aria-expanded="false" aria-controls="demo3">Habilidades</button>
+                <div id="demo3" class="collapse">
+                    <p></p>
+                    <h5 id="place">Dactilografía</h5>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:100%"></div>
+                    </div>
+                    <h5 id="place">Html</h5>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:95%"></div>
+                    </div>
+                    <h5 id="place">Inglés</h5>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" id="contacto">
+            <div class="row">
+                <div class="col 12 col-md-6">
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li><img src="./whatsapp.svg" alt="whatsappicon"> 223 5721-9901</li>
+                        <li><img src="./envelope.svg" alt="emailicon"> Lorem-ip@gmail.com</li>
+                        <li><img src="./linkedin.svg" alt="linkedinicon"> @user</li>
+                    </ul>
+                </div>
+            </div>
+            <p id="miParrafo" onmouseover="cambiar(true)" onmouseout="cambiar(false)">Autores favoritos</p>
+            <p id="miParrafo2" onmouseover="cambiarTexto(true)" onmouseout="cambiarTexto(false)">Intereses</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hoverCollapseButtons = document.querySelectorAll('.hover-collapse');
+
+            hoverCollapseButtons.forEach(button => {
+                button.addEventListener('mouseenter', function () {
+                    const targetId = this.getAttribute('data-bs-target').replace('#', '');
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        const isCollapsed = targetElement.classList.contains('show');
+                        if (!isCollapsed) {
+                            targetElement.classList.add('show');
+                        } else {
+                            targetElement.classList.remove('show');
+                        }
+                    }
+                });
+            });
+        });
+
+        var texto = 'Autores favoritos';
+        var texto2 = 'Sófocles / Cervantes / Borges / Aira / Bradbury / Cheever / Balzac';
+
+        function cambiar(nuevo) {
+            var parrafo = document.getElementById('miParrafo');
+            parrafo.innerHTML = nuevo ? texto2 : texto;
+        }
+
+        var textoOriginal = 'Intereses';
+        var textoNuevo = 'Cine de acción / Brit pop / Golf / Tenis / Fotografía / Caminatas agrestes';
+
+        function cambiarTexto(nuevoTexto) {
+            var parrafo = document.getElementById('miParrafo2');
+            parrafo.innerHTML = nuevoTexto ? textoNuevo : textoOriginal;
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
